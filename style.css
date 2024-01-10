@@ -150,7 +150,7 @@ span {
 
 .hero-message {
     background-color: white;
-    color: black;
+    
     height: 70px;
     display: flex;
     justify-content: center;
@@ -158,9 +158,31 @@ span {
     font-size: 5rem;
     width: 80%;
     margin-bottom: 25px;
+    position: absolute;
+    /**transform: translate(-50%,-50%);**/
+    white-space: nowrap;
+    
+    color: aqua;
+    background: linear-gradient(to right,#4d4d4d 0,#00d5ff 20%,#fff 25%,#4d4d4d 0%);
+    background-position: 0;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 3s infinite forwards;
+    -webkit-text-size-adjust: none;
+    
+}
+    
+    @-webkit-keyframes shine{
+        0%{
+            background-position: 0;
+    
+        }
+        100%{
+            background-position: 750px;
+        }
 }
 
-.hero-message a {
+.hero-message  {
     color: #007185;
 }
 
@@ -213,8 +235,7 @@ footer {
     justify-content: center;
     align-items: center;
     font-size: 0.85rem;
-
-}
+    }
 
 .foot-panel2 {
     background-color: #222f3d; 
